@@ -1,0 +1,65 @@
+<div flex layout="column" layout-align="start stretch" class="landing-page">
+	<div flex layout layout-align="start stretch" class="home-content">
+		<div flex layout layout-align="start stretch" ng-if="homeState == ''">
+			<div flex="20"></div>
+			<div flex layout="column" layout-align="start stretch">
+				<div flex="20"></div>
+				<div flex layout="column" layout-align="start stretch">
+					<div flex style="background-color: blue"></div>
+					<div flex style="background-color: yellow;"></div>
+					<div flex="20" layout="column" layout-align="center stretch">
+						<div flex layout layout-align="center stretch">
+							<div flex></div>
+							<div flex layout="row" layout-align="center stretch" >
+								<div flex="10"></div>
+								<div flex layout layout-align="center center" class="home-start-now-button pointer" ng-click="StartNow('search')">Start Now</div>
+								<div flex="10"></div>
+							</div>
+							<div flex></div>
+						</div>
+					</div>
+				</div>
+				<div flex="20"></div>
+			</div>
+			<div flex="20"></div>
+		</div>
+		<div flex layout layout-align="start stretch" ng-if="homeState == 'landing'">
+			<div flex="35"></div>
+			<div flex layout="column" layout-align="start stretch">
+				<div flex="20"></div>
+				<!-- class="home-search-welcome"-->
+				<div flex layout layout-align="start stretch" class="search-form" layout-padding>
+					<div flex layout="column" layout-align="start stretch">
+						<div flex="5"></div>
+						<div flex="10" layout layout-align="center center" class="form-header"> Help us understand what you need </div>
+						<div flex="10"></div>
+						<div flex="10" layout layout-align="start stretch" my-setter margin="10">
+							<md-icon flex="none" md-svg-src="{{SVG.manufacturer}}" layout layout-align="center center"  my-setter margin="10" ></md-icon>
+							<select flex>
+								<option value="1"> Izusu <option>
+							</select>
+						</div>
+						<div flex="10" layout layout-align="start stretch" my-setter margin="10">
+							<md-icon flex="none" md-svg-src="{{SVG.truck}}" layout layout-align="center center"  my-setter margin="10" ></md-icon>
+							<input flex type="text" placeholder="Model" ng-model="search.model">
+						</div>
+						<div flex="10" layout layout-align="start stretch" my-setter margin="10">
+							<md-icon flex="none" md-svg-src="{{SVG.minimum}}" layout layout-align="center center"  my-setter margin="10" ></md-icon>
+							<input flex type="text" placeholder="Minimum Price" ng-model="search.minimum">
+						</div>
+						<div flex="10" layout layout-align="start stretch" my-setter margin="10">
+							<md-icon flex="none" md-svg-src="{{SVG.maximum}}" layout layout-align="center center"  my-setter margin="10" ></md-icon>
+							<input flex type="text" placeholder="Maximum Price" ng-model="search.maximum">
+						</div>
+						<div flex></div>
+						<div flex="10" layout layout-align="start stretch"  my-setter margin="10" >
+							<md-button type="submit" class="md-raised button-submit" flex> Submt details </md-button>
+						</div>
+					</div>
+				</div>
+				<div flex="20"></div>
+			</div>
+			<div flex="35"></div>
+		</div>
+	</div>
+</div>

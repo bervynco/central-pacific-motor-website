@@ -1,0 +1,622 @@
+
+/* ANIMATIONS*/
+
+@keyframes blur {
+    0% {
+        filter: none;
+    }
+
+    50% {
+        filter: blur(0.5px);
+    }
+
+    100% {
+        filter: none;
+    }
+}
+
+/* Fade Animations */
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+/* End of Fade Animations */
+
+@-webkit-keyframes rotate {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes rotate {
+    0% {
+        -moz-transform: rotate(0deg);
+    }
+
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-o-keyframes rotate {
+    0% {
+        -o-transform: rotate(0deg);
+    }
+
+    100% {
+        -o-transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes btt-in {
+    from {
+        bottom: -100%;
+    }
+
+    to {
+        bottom: 0;
+    }
+}
+
+@keyframes btt-out {
+    from {
+        bottom: 0;
+    }
+
+    to {
+        bottom: -100%;
+    }
+}
+
+@keyframes rtl-in {
+    from {
+        right: -100%;
+    }
+
+    to {
+        right: 0;
+    }
+}
+
+@keyframes rtl-out {
+    from {
+        right: 0%;
+    }
+
+    to {
+        right: -100%;
+    }
+}
+
+@keyframes scalein {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes scaleout {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(0);
+    }
+}
+/* END OF AO PAGE */
+
+@keyframes homebtn-in {
+    from {
+        opacity: 0;
+        width: 0%;
+    }
+
+    to {
+        opacity: 1;
+        width: 3%;
+    }
+}
+
+@keyframes homebtn-out {
+    to {
+        opacity: 0;
+        width: 0%;
+    }
+
+    from {
+        opacity: 1;
+        width: 3%;
+    }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 50;
+  }
+}
+
+
+@keyframes vert-in {
+    from {
+        opacity: 0;
+        width: 0%;
+    }
+
+    to {
+        opacity: 1;
+        width: 10%;
+    }
+}
+
+@keyframes vert-out {
+    to {
+        opacity: 0;
+        width: 0%;
+    }
+
+    from {
+        opacity: 1;
+        width: 10%;
+    }
+}
+
+@-webkit-keyframes down {
+      0% { top: 0px; }
+     50% { top: 40px; }
+    100% { top: 0px; }
+}
+@-moz-keyframes down {
+      0% { top: 0px; }
+     50% { top: 40px; }
+    100% { top: 0px; }
+}
+
+@keyframes left-to-right {
+    0%  {max-width: 0%;}
+    100% {max-width: 100%;}
+}
+.scrollbar-rail > .scroll-element {
+    background-color: transparent;
+}
+
+.scrollbar-rail > .scroll-element .scroll-bar:hover {
+    background-color: rgba(79,33,112, 0.9);
+}
+
+.scrollbar-rail > .scroll-element .scroll-bar {
+    background-color: rgba(79,33,112, .9);
+    transition: background-color 1s;
+    will-change: background-color;
+}
+
+.scrollbar-rail > .scroll-element.scroll-y .scroll-element_size {
+    background-color: rgba(79,33,112,0.7);
+}
+div.main-container[ui-view].ui-view-container {
+    position: relative;
+}
+
+[ui-view].ng-enter, [ui-view].ng-leave {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /*-webkit-animation-delay: .7s;  Safari 4.0 - 8.0 
+    animation-delay: .7s;*/
+    -webkit-transition: all .8s ease-in-out;
+    -moz-transition: all .8s ease-in-out;
+    -o-transition: all .8s ease-in-out;
+    transition: all .8s ease-in-out;
+}
+
+[ui-view].ng-enter {
+    opacity: 0;
+}
+
+[ui-view].ng-enter-active {
+    opacity: 1;
+}
+
+[ui-view].ng-leave {
+    position: absolute;
+    opacity: 1;
+}
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Material Icons'), local('MaterialIcons-Regular'), url(../fonts/matfont.woff2) format('woff2');
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
+.material-icons.primary {
+    color: rgba(50,50,50,1);
+}
+
+
+
+
+[ui-view].ng-leave-active {
+    opacity: 0;
+}
+@font-face {
+    font-family: 'Syncopate';
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/other/sync.woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+* {
+    outline: none;
+}
+
+@font-face {
+    font-family: otherone;
+    src: url('../fonts/gt-walsheim/GT-Walsheim-Regular.eot?') format('eot'), url('../fonts/gt-walsheim/GT-Walsheim-Regular.woff') format('woff'), 
+    url('../fonts/gt-walsheim/GT-Walsheim-Regular.ttf') format('truetype');
+}
+
+
+body {
+    font-family: otherone;
+    background: rgba(255,255,255,1);
+    overflow: hidden !important;
+    cursor: default;
+}
+
+body *.ng-leave {
+    animation: fadeout 1s;
+}
+
+.span-height {
+    height: 100%;
+}
+
+.span-width {
+    width: 100%;
+}
+
+.test-g {
+    border: 1px solid white;
+}
+
+.pointer {
+    cursor:pointer;
+}
+
+button.md-icon-button.md-button:hover svg {
+    transition: transform 0.5s ease-in-out;
+    transform: scale(1.25);
+    animation: blur 1s;
+}
+
+.main-header {
+    border-bottom: 1px solid rgba(255,255,255,0.01);
+    z-index: 9;
+}
+
+.main-footer {
+    border-top: 1px solid rgba(255,255,255,0.01);
+    z-index: 9;
+}
+
+div[ui-view] {
+    position: relative;
+}
+
+div.main-header span {
+    opacity: 0.5;
+    letter-spacing: 2px;
+}
+
+/* LOADER */
+.loader-circle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    margin-left: -60px;
+    margin-top: -60px;
+}
+
+.loader-line-mask {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 60px;
+    height: 120px;
+    margin-left: -60px;
+    margin-top: -60px;
+    overflow: hidden;
+    -webkit-transform-origin: 60px 60px;
+    -moz-transform-origin: 60px 60px;
+    -ms-transform-origin: 60px 60px;
+    -o-transform-origin: 60px 60px;
+    transform-origin: 60px 60px;
+    -webkit-mask-image: -webkit-linear-gradient(top, #000000, rgba(0, 0, 0, 0));
+    -webkit-animation: rotate 1.2s infinite linear;
+    -moz-animation: rotate 1.2s infinite linear;
+    -o-animation: rotate 1.2s infinite linear;
+    animation: rotate 1.2s infinite linear;
+}
+
+.loader-line-mask .loader-line {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 1px rgba(50,50,50, 0.8);
+}
+
+
+.load-container {
+
+    animation: fadein 1s;
+    will-change: opacity;
+}
+
+.load-container.ng-leave-active {
+    animation: fadeout 1s;
+}
+/* END OF LOADER */
+
+/* Landing page */
+.landing-page {
+    background:  -webkit-linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url("../images/bg/trucks-gray.jpg");
+    background:  -moz-linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url("../images/bg/trucks-gray.jpg");
+    background:  -o-linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url("../images/bg/trucks-gray.jpg");
+    background:  linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url("../images/bg/trucks-gray.jpg");
+    background-size: cover;
+}
+.home-content {
+    color: black;
+}
+/* HEADER DETAILS */
+div.master-header {
+    margin: 0;
+    /* border: 1px solid rgba(41,56,66,0.3); */
+    background-color: rgba(255,255,255,0);
+    color: rgba(1,1,1,1);
+}
+
+
+div.master-header div.company-logo > img {
+    max-height: 90%;
+    max-width: 90%;
+}
+
+div.master-header div.company-text > span{
+    letter-spacing:3px;
+}
+div.master-header div.silver-logo > img {
+    margin-top: -2%;
+    max-height: 120%;
+    max-width: 120%;
+}
+
+div.master-header div.dashboard-title {
+    animation: homebtn-in 0.5s;
+}
+
+div.master-header div.dashboard-title.ng-leave {
+    animation: homebtn-out;
+}
+
+div.master-header div.dashboard-title > span {
+    margin-left: 1%;
+    font-size: 170%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 125%;
+    word-break: keep-all;
+}
+
+div.master-header div.date-time,
+div.master-header div.user-info {
+padding: 0px 3px;
+}
+
+div.master-header div.date-time > span {
+    font-size: 100%;
+}
+
+div.master-header div.date-time > ds-widget-clock {
+    font-size: 95%;
+    opacity: 0.5;
+}
+
+
+div.master-header div.info-tab > div.date-time-tab {
+    font-size: 80%;
+    opacity: 0.8;
+    color: rgba(255,255,255, 0.75);
+}
+
+div.master-header div.info-tab > div.user-info-tab {
+    padding-right: 10px;
+}
+
+div.master-header div.info-tab > div.user-info-tab > span {
+    padding: 0px 2px;
+}
+
+div.master-header div.info-tab > div.user-info-tab > span.name {
+    color: rgba(255,255,255, 0.75);
+    font-weight:bolder;
+}
+
+div.master-header div.info-tab > div.user-info-tab > span.greet {
+    color: rgba(255,255,255, 0.75);
+}
+div.master-header > div > div > .underline {
+    max-height: 2%;
+    /* height: 10%; */
+    background-color: black;
+    animation: left-to-right 1s ease-in-out;
+    border-radius: 10px;
+}
+div.master-header > div > div> .space-eater {
+    max-height: 2%;
+    /* height: 10%; */
+    background-color: transparent;
+}
+/* div.master-header .underline {
+    height: 10%;
+    background-color: black;
+} */
+/* END OF HEADER DETAILS */
+/* FOOTER DETAILS */
+div.master-footer {
+    position: absolute;
+    height: 5%;
+    width: 100%;
+    bottom: 0;
+}
+
+    div.master-footer div.silver-logo > img {
+        margin-top: 7%;
+        max-height: 90%;
+        max-width: 90%;
+    }
+
+    div.master-footer span.subtitle {
+        font-size: 75%;
+        opacity: 0.8;
+        letter-spacing: 1px;
+        color:black;
+    }
+/* END OF FOOTER DETAILS */
+/* home */
+
+.home-start-now-button {
+    border: 1px solid gray;
+    font-size: 1.5em;
+    color: black;
+    /* background-color: green; */
+    margin:10px;
+}
+.home-search-welcome {
+    font-size: 5em;
+    color: rgba(50,50,50,1);
+    font-weight: lighter;
+}
+.search-form {
+    background-color: rgba(255,255,255,0.3);
+}
+
+.search-form > div >.form-header {
+    font-size:2em;
+}
+.search-form > div {
+    border: 3px solid rgba(100,100,100,1);
+}
+/* general */
+input[type="text"] {
+    padding: 10px;
+    border: solid 1px black;
+    transition: box-shadow 0.3s, border 0.3s;
+    background-color: transparent;
+}
+input[type="text"]:focus{
+    border: solid 1px #707070;
+    box-shadow: 0 0 5px 1px #969696;
+    background-color: white;
+    transition: background-color 0.5s ease-in-out;
+}
+select:focus {
+    background-color:  #fff;
+    transition: background-color 0.5s ease-in-out;
+}
+select {
+    padding: 5px 8px;
+    border-radius: 3px;
+    border: solid 1px #707070;
+    box-shadow: none;
+    background-color:  transparent;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+.icon-zoom-in-animate
+{
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1); 
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1); 
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1);   
+
+}
+.icon-zoom-in-animate:hover
+{   
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.5);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.5);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.5);
+    transition: all 200ms ease-in;
+    transform: scale(1.5);
+}
+.button-submit{
+    background-color: rgba(156,186,127,1) !important;
+}
