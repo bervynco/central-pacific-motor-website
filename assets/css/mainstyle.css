@@ -418,10 +418,10 @@ div.main-header span {
 
 /* Landing page */
 .landing-page {
-    background:  -webkit-linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url("../images/bg/trucks-gray.jpg");
-    background:  -moz-linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url("../images/bg/trucks-gray.jpg");
-    background:  -o-linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url("../images/bg/trucks-gray.jpg");
-    background:  linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url("../images/bg/trucks-gray.jpg");
+    background:  -webkit-linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("../images/bg/trucks-gray.jpg");
+    background:  -moz-linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("../images/bg/trucks-gray.jpg");
+    background:  -o-linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("../images/bg/trucks-gray.jpg");
+    background:  linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("../images/bg/trucks-gray.jpg");
     background-size: cover;
 }
 .home-content {
