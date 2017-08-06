@@ -17,7 +17,7 @@ mainRouter.config(['$stateProvider', '$urlRouterProvider', function ($stateProvi
             templateUrl: "./angular/Templates/Home/home.html",
             controller: "HomeController"
         })
-         .state('offerings', {
+        .state('offerings', {
             parent: 'site',
             data: {
                 roles: []
@@ -26,7 +26,7 @@ mainRouter.config(['$stateProvider', '$urlRouterProvider', function ($stateProvi
             templateUrl: "./angular/Templates/Offerings/offerings.html",
             controller: "OfferingController"
         })
-         .state('contacts', {
+        .state('contacts', {
             parent: 'site',
             data: {
                 roles: []
@@ -34,6 +34,15 @@ mainRouter.config(['$stateProvider', '$urlRouterProvider', function ($stateProvi
             url: "/contacts",
             templateUrl: "./angular/Templates/Contacts/contact.html",
             controller: "ContactController"
+        })
+        .state('aboutus', {
+            parent: 'site',
+            data: {
+                roles: []
+            },
+            url: "/aboutus",
+            templateUrl: "./angular/Templates/AboutUs/aboutus.html",
+            controller: "AboutUsController"
         })
         // .state('home', {
         //     parent: 'site',

@@ -24,7 +24,7 @@ app.controller('MainController', function ($mdDialog, $mdToast, $state, $mdSiden
     $scope.loadstate = true;
 
     
-
+    
     $scope.GetMainState = function () {
         return $scope.MainState;
     }
@@ -51,5 +51,5 @@ app.controller('MainController', function ($mdDialog, $mdToast, $state, $mdSiden
         });
         $scope.Threads = [];
     }
-    
+    // $scope.ChangeState('home');
 });

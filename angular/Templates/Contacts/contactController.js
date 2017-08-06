@@ -2,5 +2,8 @@ app.controller('ContactController', function ($scope, $rootScope, $interval, Dat
     $scope.SVG = $scope.ConfigurableItems.SVG;
     $scope.$parent.ChangeState("contacts");
     $scope.$parent.ChangeLoadBarState(false);
-    
+    $scope.contactState = false;
+    $scope.ChangeContactState = function(){
+       $scope.contactState = true;
+    } 
 });

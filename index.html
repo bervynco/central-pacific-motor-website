@@ -34,7 +34,7 @@
     <script src="./angular/Templates/Home/homeController.js"></script>
     <script src="./angular/Templates/Contacts/contactController.js"></script>
     <script src="./angular/Templates/Offerings/offeringController.js"></script>
-    
+    <script src="./angular/Templates/AboutUs/aboutUsController.js"></script>
     <!--build:css css/styles.min.css-->
     <link rel="stylesheet" href="./assets/css/jquery.scrollbar.css">
     <link rel="stylesheet" href="./assets/css/material.css">
@@ -57,10 +57,9 @@
     <!--END: LOADER-->
     <div flex layout="column" layout-align="start stretch">
         <!-- <div class="landing-page"></div> -->
-        <div flex="15" layout layout-align="start stretch" class="master-header">
-            <div flex></div>
+        <div flex="15" ng-if="MainState == 'home'" layout layout-align="start stretch" class="master-header">
+            <div flex="25"></div>
             <div flex layout="row" layout-align="start stretch">
-                <div flex="10"></div>
                 <div flex class="company-text pointer" layout="column" layout-align="center stretch" ng-click="ChangeState('home')">
                     <div flex></div>
                     <span flex layout layout-align="center center" style="color:black;font-size:1.2em; letter-spacing: 5px;"> HOME </span>
@@ -70,27 +69,59 @@
                 <div flex="none" my-setter width-in-percent="2"></div>
                  <div flex class="company-text pointer" layout="column" layout-align="center stretch" ng-click="ChangeState('offerings')">
                     <div flex></div>
-                    <span flex layout layout-align="center center" style="color:black;font-size:1.2em; letter-spacing: 5px;"> OFFERINGS </span>
+                    <span flex layout layout-align="center center" style="color:black;font-size:1.2em; letter-spacing: 5px;"> PRODUCTS </span>
                     <div flex="10" ng-class="MainState == 'offerings' ? 'underline': 'space-eater' " my-setter margin="5"></div>
                     <div flex></div>
                 </div> 
-                <!-- <div flex="none" my-setter width-in-percent="2"></div>
-                <div flex class="company-text" layout="column" layout-align="center stretch">
+                <div flex="none" my-setter width-in-percent="2"></div>
+                 <div flex class="company-text pointer" layout="column" layout-align="center stretch" ng-click="ChangeState('aboutus')">
                     <div flex></div>
-                    <span flex layout layout-align="center center" style="color:black;font-size:1.2em; letter-spacing: 5px;"> LOGO </span>
-                    <div flex="10" class="underline" my-setter margin="5"></div>
+                    <span flex layout layout-align="center center" style="color:black;font-size:1.2em; letter-spacing: 5px;"> ABOUT US </span>
+                    <div flex="10" ng-class="MainState == 'aboutus' ? 'underline': 'space-eater' " my-setter margin="5"></div>
                     <div flex></div>
-                </div> -->
+                </div> 
                 <div flex="none" my-setter width-in-percent="2"></div>
                 <div flex class="company-text pointer" layout="column" layout-align="center stretch" ng-click="ChangeState('contacts')">
                     <div flex></div>
-                    <span flex layout layout-align="center center" style="color:black;font-size:1.2em; letter-spacing: 5px;"> CONTACTS </span>
+                    <span flex layout layout-align="center center" style="color:black;font-size:1.2em; letter-spacing: 5px;"> CONTACT US</span>
+                    <div flex="10" ng-class="MainState == 'contacts' ? 'underline': 'space-eater' " my-setter margin="5"></div>
+                    <div flex></div>
+                </div>
+            </div>
+            <div flex="25"></div>
+        </div>
+        <div flex="10" ng-if="MainState != 'home'" layout layout-align="start stretch" class="master-header">
+            <div flex="25"></div>
+            <div flex layout="row" layout-align="start stretch">
+                <div flex class="company-text pointer" layout="column" layout-align="center stretch" ng-click="ChangeState('home')">
+                    <div flex></div>
+                    <span flex layout layout-align="center center" style="color:black;font-size:1.2em; letter-spacing: 5px;"> HOME </span>
+                    <div flex="10" ng-class="MainState == 'home' ? 'underline': 'space-eater' " my-setter margin="5"></div>
+                    <div flex></div>
+                </div>
+                <div flex="none" my-setter width-in-percent="2"></div>
+                 <div flex class="company-text pointer" layout="column" layout-align="center stretch" ng-click="ChangeState('offerings')">
+                    <div flex></div>
+                    <span flex layout layout-align="center center" style="color:black;font-size:1.2em; letter-spacing: 5px;"> PRODUCTS </span>
+                    <div flex="10" ng-class="MainState == 'offerings' ? 'underline': 'space-eater' " my-setter margin="5"></div>
+                    <div flex></div>
+                </div> 
+                <div flex="none" my-setter width-in-percent="2"></div>
+                 <div flex class="company-text pointer" layout="column" layout-align="center stretch" ng-click="ChangeState('aboutus')">
+                    <div flex></div>
+                    <span flex layout layout-align="center center" style="color:black;font-size:1.2em; letter-spacing: 5px;"> ABOUT US </span>
+                    <div flex="10" ng-class="MainState == 'aboutus' ? 'underline': 'space-eater' " my-setter margin="5"></div>
+                    <div flex></div>
+                </div> 
+                <div flex="none" my-setter width-in-percent="2"></div>
+                <div flex class="company-text pointer" layout="column" layout-align="center stretch" ng-click="ChangeState('contacts')">
+                    <div flex></div>
+                    <span flex layout layout-align="center center" style="color:black;font-size:1.2em; letter-spacing: 5px;"> CONTACT US </span>
                     <div flex="10" ng-class="MainState == 'contacts' ? 'underline': 'space-eater' " my-setter margin="5"></div>
                     <div flex></div>
                 </div> 
-                <div flex="10"></div>
             </div>
-            <div flex></div>
+            <div flex="25"></div>
         </div>
         <div flex ui-view layout class="main-container"></div>
         <div class="master-footer" layout>
