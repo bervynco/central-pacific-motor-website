@@ -1,5 +1,5 @@
 <div flex layout="row" layout-align="start stretch" class="contact-landing-page">
-	<div flex layout layout-align="start stretch" ng-if="contactState === false">
+	<div flex layout layout-align="start stretch" ng-if="contactState == false">
 		<div flex="20"></div>
 		<div flex layout="column" layout-align="start stretch" class="contact-content" >
 			<div flex="40" layout layout-align="center end" class="contact-header"> Contact Us </div>
@@ -16,15 +16,74 @@
 		<div flex="20"></div>
 	</div>
 	<div flex layout layout-align="start stretch" ng-if="contactState == true ">
-		<div flex="35"></div>
-			<div flex layout="column" layout-align="start stretch">
-				<div flex="20"></div>
-				<div flex layout layout-align="start stretch" class="contact-form" layout-padding>
-					<div flex>
+		<div flex="20"></div>
+		<div flex layout="column" layout-align="start stretch" >
+			<div flex="20"></div>
+			<div flex layout="row" layout-align="start stretch">
+				<div flex layout="row" layout-align="start stretch" class="contact-form" layout-padding>
+					<div flex layout layout-align="start stretch" class="form">
+						<div flex="40" layout="column" layout-align="start stretch">
+							<div flex="5"></div>
+							<div flex="5" class="contact-form-header" layout layout-align="start stretch">
+								<div flex></div>
+								<md-icon flex="10" md-svg-src="{{SVG.mail}}" layout layout-align="end center"></md-icon>
+								<div flex layout layout-align="start center">MAIL US</div>
+								<div flex></div>
+							</div>
+							<div flex layout="column" layout-align="start stretch">
+								<div flex="10"></div>
+								<div flex="10" layout layout-align="start stretch" my-setter margin="10">
+									<md-icon flex="none" md-svg-src="{{SVG.person}}" layout layout-align="center center"  my-setter margin="10" ></md-icon>
+									<input flex type="text" placeholder="Name" ng-model="email.name">
+								</div>
+								<div flex="10" layout layout-align="start stretch" my-setter margin="10">
+									<md-icon flex="none" md-svg-src="{{SVG.phone}}" layout layout-align="center center"  my-setter margin="10" ></md-icon>
+									<input flex type="text" placeholder="Contact Number" ng-model="email.contactNumber">
+								</div>
+								<div flex="10" layout layout-align="start stretch" my-setter margin="10">
+									<md-icon flex="none" md-svg-src="{{SVG.email}}" layout layout-align="center center"  my-setter margin="10" ></md-icon>
+									<input flex type="email" placeholder="Email Address" ng-model="search.emailAddress">
+								</div>
+								<div flex="10" layout layout-align="start stretch" my-setter margin="10">
+									<md-icon flex="none" md-svg-src="{{SVG.message}}" layout layout-align="center center"  my-setter margin="10" ></md-icon>
+									<textarea flex ng-model="email.message">
+									</textarea>
+								</div>
+								<div flex></div>
+								<div flex="10" layout layout-align="start stretch"  my-setter margin="10" >
+									<md-button type="submit" class="md-raised button-submit" flex> Send us your message </md-button>
+								</div>
+							</div>
+						</div>
+						<div flex="5" style="border-right: 1px solid rgba(150,150,150,0.5)"></div>
+						<div flex layout="column" layout-align="start stretch">
+							<div flex="5"></div>
+							<div flex="5" class="contact-form-header" layout layout-align="start stretch">
+								<div flex="25"></div>
+								<md-icon flex="10" md-svg-src="{{SVG.marker}}" layout layout-align="end center"></md-icon>
+								<div flex layout layout-align="start center">OUR LOCATION</div>
+								<div flex="25"></div>
+							</div>
+							<div flex layout="column" layout-align="start stretch">
+								<div flex="10"></div>
+								<div flex="10" layout layout-align="start stretch" my-setter margin="10">
+									<md-icon flex="none" md-svg-src="{{SVG.marker}}" layout layout-align="center center"  my-setter margin="10" ></md-icon>
+									<div flex layout layout-align="start center" style="color:black; border: solid 1px #707070;padding-left:10px; background-color:rgba(210,210,210,1);">1249 EDSA Quezon City Metro Manila </div>
+								</div>
+								<div flex="10" layout layout-align="start stretch" my-setter margin="10">
+									<md-icon flex="none" md-svg-src="{{SVG.phone}}" layout layout-align="center center"  my-setter margin="10" ></md-icon>
+									<div flex layout layout-align="start center" style="color:black; border: solid 1px #707070;padding-left:10px; background-color:rgba(210,210,210,1);"> +63 2 362 4624 </div>
+								</div>
+								<div flex layout layout-align="start stretch" my-setter margin="10">
+									<img flex src="./assets/images/bg/location.png" style="background-size: cover;">
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div flex="20"></div>
 			</div>
-			<div flex="35"></div>
+			<div flex="20"></div>
+		</div>
+		<div flex="20"></div>
 	</div>
 </div>

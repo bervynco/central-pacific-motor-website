@@ -26,7 +26,13 @@ mainConfigManager.provider('ConfigurableItems', function ConfigurableItemsProvid
         manufacturer: svgsrc + "manufacturer.svg",
         minimum: svgsrc + "minimum.svg",
         maximum: svgsrc + "maximum.svg",
-        truck: svgsrc + "truck.svg"
+        truck: svgsrc + "truck.svg",
+        mail: svgsrc + "mail.svg",
+        person: svgsrc + "person.svg",
+        phone: svgsrc + "phone.svg",
+        email: svgsrc + "email.svg",
+        message: svgsrc + "message.svg",
+        marker: svgsrc + "marker.svg"
     }
 
     this.$get = function () {

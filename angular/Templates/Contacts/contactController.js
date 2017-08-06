@@ -6,4 +6,11 @@ app.controller('ContactController', function ($scope, $rootScope, $interval, Dat
     $scope.ChangeContactState = function(){
        $scope.contactState = true;
     } 
+    function myMap(){
+        var mapProp= {
+            center:new google.maps.LatLng(14.632866,121.044560),
+            zoom:5,
+        };
+        var map=new google.maps.Map(document.getElementById("map"),mapProp);
+    }
 });
