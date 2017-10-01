@@ -24,11 +24,12 @@
 					<div flex layout layout-align="start stretch" class="form">
 						<div flex="40" layout="column" layout-align="start stretch">
 							<div flex="5"></div>
-							<div flex="5" class="contact-form-header" layout layout-align="start stretch">
-								<div flex></div>
-								<md-icon flex="10" md-svg-src="{{SVG.mail}}" layout layout-align="end center"></md-icon>
-								<div flex layout layout-align="start center">MAIL US</div>
-								<div flex></div>
+							<div flex="10" class="contact-form-header" layout="column" layout-align="start stretch">
+								<div flex layout layout-align="start stretch" my-setter margin="10">
+									<md-icon flex="none" md-svg-src="{{SVG.mail}}" layout layout-align="center center" my-setter margin="10"></md-icon>
+									<div flex>MAIL US</div>
+								</div>
+								<!-- <div flex="5"></div> -->
 							</div>
 							<div flex layout="column" layout-align="start stretch">
 								<div flex="10"></div>
@@ -50,15 +51,17 @@
 									</textarea>
 								</div>
 								<div flex></div>
-								<div flex="10" layout layout-align="start stretch"  my-setter margin="10" >
+								<div flex="10" layout layout-align="center stretch">
+									<div flex="5"></div>
 									<md-button type="submit" class="md-raised button-submit" flex> Send us your message </md-button>
 								</div>
+								<div flex="10"></div>
 							</div>
 						</div>
 						<div flex="5" style="border-right: 1px solid rgba(150,150,150,0.5)"></div>
 						<div flex layout="column" layout-align="start stretch">
 							<div flex="5"></div>
-							<div flex="5" class="contact-form-header" layout layout-align="start stretch">
+							<div flex="5" class="contact-form-header" layout layout-align="center stretch">
 								<div flex="25"></div>
 								<md-icon flex="10" md-svg-src="{{SVG.marker}}" layout layout-align="end center"></md-icon>
 								<div flex layout layout-align="start center">OUR LOCATION</div>

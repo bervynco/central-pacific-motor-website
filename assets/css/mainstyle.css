@@ -307,8 +307,8 @@ div.main-container[ui-view].ui-view-container {
 
 @font-face {
     font-family: otherone;
-    src: url('../fonts/gt-walsheim/GT-Walsheim-Regular.eot?') format('eot'), url('../fonts/gt-walsheim/GT-Walsheim-Regular.woff') format('woff'), 
-    url('../fonts/gt-walsheim/GT-Walsheim-Regular.ttf') format('truetype');
+    /* src: url('../fonts/gt-walsheim/GT-Walsheim-Regular.eot?') format('eot'), url('../fonts/gt-walsheim/GT-Walsheim-Regular.woff') format('woff'),  */
+    src: url('../fonts/Lato/Lato-Regular.ttf') format('truetype');
 }
 
 
@@ -338,7 +338,9 @@ body *.ng-leave {
 .pointer {
     cursor:pointer;
 }
-
+.not-allowed {
+    cursor: not-allowed;
+}
 button.md-icon-button.md-button:hover svg {
     transition: transform 0.5s ease-in-out;
     transform: scale(1.25);
@@ -683,4 +685,5 @@ select {
 .button-submit{
     background-color: rgba(156,186,127,1) !important;
     border-radius:20px;
+    color: whitesmoke !important;
 }

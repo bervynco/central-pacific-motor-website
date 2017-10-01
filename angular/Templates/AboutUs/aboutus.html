@@ -1,3 +1,92 @@
-<div layout="row" layout-align="start stretch" flex>
-	<div flex style="background-color: whitesmoke;"></div>
+<style>
+	.about-us {
+		color: black;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fcfff4+0,d2d2d2+41,d2d2d2+100 */
+		background: #fcfff4; /* Old browsers */
+		background: -moz-radial-gradient(center, ellipse cover, #fcfff4 0%, #d2d2d2 41%, #d2d2d2 100%); /* FF3.6-15 */
+		background: -webkit-radial-gradient(center, ellipse cover, #fcfff4 0%,#d2d2d2 41%,#d2d2d2 100%); /* Chrome10-25,Safari5.1-6 */
+		background: radial-gradient(ellipse at center, #fcfff4 0%,#d2d2d2 41%,#d2d2d2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#d2d2d2',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */		
+		
+	}
+	.about-us .header {
+		font-size: 4em;
+	}
+	.scroll {
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+
+	.company-profile-card {
+		height: 300px;
+		width:100%;
+		background-color: yellow;
+		margin:10px;
+	}
+</style>
+<div layout="column" layout-align="start stretch" flex class="about-us" layout-padding>
+	<div flex="10" layout layout-align="start stretch">
+		<div flex="10"></div>
+		<div flex="none" my-setter width-in-percent="1.5" style="background-color: 	rgba(220,20,60,1)"></div>
+		<div flex="none" my-setter width-in-percent="3"></div>
+		<div flex layout layout-align="start center" class="header"> Our Company </div>
+	</div>
+	<div flex layout="column" layout-align="start stretch" class="scroll">
+		<div flex="none" layout="column" layout-align="start stretch">
+			<div class="company-profile-card">
+
+			</div>
+			<div class="company-profile-card">
+
+			</div>
+			<div class="company-profile-card">
+
+			</div>
+			<div class="company-profile-card">
+
+			</div>
+		</div>
+		<!-- <div class="company-profile-card">
+
+		</div>
+		<div class="company-profile-card">
+
+		</div>
+		<div class="company-profile-card">
+
+		</div>
+		<div class="company-profile-card">
+
+		</div>
+		<div class="company-profile-card">
+
+		</div>
+		<div class="company-profile-card">
+
+		</div>
+		<div class="company-profile-card">
+
+		</div>
+		<div class="company-profile-card">
+
+		</div>
+		<div class="company-profile-card">
+
+		</div>
+		<div class="company-profile-card">
+
+		</div>
+		<div class="company-profile-card">
+
+		</div>
+		<div class="company-profile-card">
+
+		</div>
+		<div class="company-profile-card">
+
+		</div>
+		<div class="company-profile-card">
+
+		</div> -->
+	</div>
 </div>

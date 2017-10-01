@@ -1,29 +1,6 @@
 <div flex layout="column" layout-align="start stretch" class="landing-page">
 	<div flex layout layout-align="start stretch" class="home-content">
-		<div flex layout layout-align="start stretch" ng-if="homeState == 'landing'">
-			<div flex="20"></div>
-			<div flex layout="column" layout-align="start stretch">
-				<div flex="20"></div>
-				<div flex layout="column" layout-align="start stretch">
-					<div flex layout layout-align="center center">Placeholder 1</div>
-					<div flex layout layout-align="center center"> Placeholder 2</div>
-					<div flex="20" layout="column" layout-align="center stretch">
-						<div flex layout layout-align="center stretch">
-							<div flex></div>
-							<div flex layout="row" layout-align="center stretch" >
-								<div flex="10"></div>
-								<div flex layout layout-align="center center" class="home-start-now-button pointer" ng-click="StartNow('search')">Start Now</div>
-								<div flex="10"></div>
-							</div>
-							<div flex></div>
-						</div>
-					</div>
-				</div>
-				<div flex="20"></div>
-			</div>
-			<div flex="20"></div>
-		</div>
-		<div flex layout layout-align="start stretch" ng-if="homeState == 'search'" class="search-page">
+		<div flex layout layout-align="start stretch" class="search-page">
 			<div flex="35"></div>
 			<div flex layout="column" layout-align="start stretch">
 				<div flex="20"></div>
@@ -51,7 +28,7 @@
 							<input flex type="text" placeholder="Maximum Price" ng-model="search.maximum">
 						</div>
 						<div flex></div>
-						<div flex="10" layout layout-align="start stretch"  my-setter margin="10" >
+						<div flex="10" layout layout-align="start stretch"  my-setter margin="10" ng-click="SearchNow()" >
 							<md-button type="submit" class="md-raised button-submit" flex> Submit details </md-button>
 						</div>
 					</div>

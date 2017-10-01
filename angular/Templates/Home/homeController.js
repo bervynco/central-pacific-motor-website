@@ -2,8 +2,15 @@ app.controller('HomeController', function ($scope, $rootScope, $interval, DataFa
 	// $scope.$parent.CheckSessionData('home');
 	$scope.$parent.ChangeState('home');
 	$scope.$parent.ChangeLoadBarState(false);
-	$scope.homeState = 'landing'
-	$scope.StartNow = function(state){
-		$scope.homeState = state;
+	$scope.search = {
+		manufacturer: '',
+		model: '',
+		minimum: '',
+		maximum: ''
+	}
+
+	$scope.SearchNow = function(){
+		localStorage.setItem("search", JSON.stringify($scope.search));
+		$scope.$parent.ChangeState("offerings");
 	}
 });

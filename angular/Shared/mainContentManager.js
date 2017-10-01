@@ -32,7 +32,9 @@ mainConfigManager.provider('ConfigurableItems', function ConfigurableItemsProvid
         phone: svgsrc + "phone.svg",
         email: svgsrc + "email.svg",
         message: svgsrc + "message.svg",
-        marker: svgsrc + "marker.svg"
+        marker: svgsrc + "marker.svg",
+        left: svgsrc + "left-arrow.svg",
+        right: svgsrc + "right-arrow.svg"
     }
 
     this.$get = function () {
@@ -119,4 +121,7 @@ mainConfigManager.config(function (ConfigurableItemsProvider, $mdThemingProvider
         .accentPalette('defaultTheme')
         .primaryPalette('primaryTheme')
         .warnPalette('warnTheme').dark();
+});
+mainConfigManager.run(function ($rootScope, $window) {
+  $rootScope._ = $window._;
 });
