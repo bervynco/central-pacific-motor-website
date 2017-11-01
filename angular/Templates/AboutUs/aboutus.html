@@ -17,76 +17,260 @@
 		overflow-y: auto;
 	}
 
-	.company-profile-card {
-		height: 300px;
-		width:100%;
-		background-color: yellow;
-		margin:10px;
+	.company-profile-intro {
+		background: url('assets/images/bg/about-us-bg.jpg');
+		background-size:cover;
 	}
+	.company-profile-content-first {
+		background: url('assets/images/bg/about-us-bg-1.jpg');
+		background-size:cover;
+	}
+	.company-profile-content-second {
+		background: url('assets/images/bg/about-us-bg-2.jpg') no-repeat center;
+	}
+	.company-profile-intro, .intro {
+		font-size: 2.5em;
+		color: rgba(220,220,220, 1);
+	}
+	.company-proflile-intro, .sub {
+		font-size: 1.25em;
+		color: rgba(220,220,220,0.5);
+		font-weight: bolder;
+	}
+	.company-content-dark {
+		font-size: 4em;
+		color: rgba(70,130,180,1);
+		letter-spacing: 3px;
+		/* color: rgba(50,50,50, 1); */
+	}
+	.company-content-light {
+		font-size: 4em;
+		color: rgba(173,216,230,1);
+		letter-spacing: 3px;
+		/* color: rgba(50,50,50, 1); */
+	}
+
+	#hexagon {
+		width: 100px;
+		height: 100px;
+		background: red;
+		border-radius: 50%;
+	}
+	.company-profile-card {
+		/* height: 300px;
+		width:100%; */
+		background-color: violet;
+	}
+
+	.team-card {
+		background-color: rgba(255,255,255,0.3);
+		font-size: 0.90em;
+		border: 1.5px solid rgba(255,255,255,0.5);
+	}
+	.profile {
+		background-color: rgba(70,130,180,1);
+		border:1.5px solid rgba(255,255,255,0.7);
+		color: rgba(255,255,255,1);
+		font-weight: bolder;
+		font-size: 4.25em;
+	}
+	.profile-name {
+		font-size: 2.0em;
+		color: rgba(50,50,50,1);
+		font-weight:bold;
+		background-color: rgba(250,250,250,0.3);
+	}
+	ol {
+		counter-reset: li; /* Initiate a counter */
+		list-style: none; /* Remove default numbering */
+		*list-style: decimal; /* Keep using default numbering for IE6/7 */
+		font: 15px 'trebuchet MS', 'lucida sans';
+		padding: 0;
+		margin-bottom: 4em;
+		text-shadow: 0 1px 0 rgba(255,255,255,.5);
+	}
+
+	ol ol {
+		margin: 0 0 0 2em; /* Add some left margin for inner lists */
+	}
+	.rounded-list li{
+		position: relative;
+		display: block;
+		padding: .4em .4em .4em 2em;
+		/* *padding: .4em; */
+		margin: .5em 0;
+		background: #ddd;
+		color: #444;
+		text-decoration: none;
+		border-radius: .3em;
+		transition: all .3s ease-out;   
+	}
+
+	.rounded-list li:hover{
+		background: #eee;
+	}
+
+	.rounded-list li:hover:before{
+		transform: rotate(360deg);  
+	}
+
+	.rounded-list li:before{
+		content: counter(li);
+		counter-increment: li;
+		position: absolute; 
+		left: -1.3em;
+		top: 50%;
+		margin-top: -1.3em;
+		background: #87ceeb;
+		height: 2em;
+		width: 2em;
+		line-height: 2em;
+		border: .3em solid #fff;
+		text-align: center;
+		font-weight: bold;
+		border-radius: 2em;
+		transition: all .3s ease-out;
+	}
+	
 </style>
-<div layout="column" layout-align="start stretch" flex class="about-us" layout-padding>
-	<div flex="10" layout layout-align="start stretch">
-		<div flex="10"></div>
-		<div flex="none" my-setter width-in-percent="1.5" style="background-color: 	rgba(220,20,60,1)"></div>
-		<div flex="none" my-setter width-in-percent="3"></div>
-		<div flex layout layout-align="start center" class="header"> Our Company </div>
-	</div>
+<div layout="column" layout-align="start stretch" flex class="about-us">
 	<div flex layout="column" layout-align="start stretch" class="scroll">
-		<div flex="none" layout="column" layout-align="start stretch">
-			<div class="company-profile-card">
-
-			</div>
-			<div class="company-profile-card">
-
-			</div>
-			<div class="company-profile-card">
-
-			</div>
-			<div class="company-profile-card">
-
+		<div flex="none" layout="column" layout-align="start stretch" my-setter height-in-percent="100">
+			<div flex class="company-profile-intro" layout="column" layout-align="start stretch">
+				<div flex></div>
+				<div flex layout="column" layout-align="start stretch" class="">
+					<div flex layout layout-align="Center center" class="intro chrome"> Central  Pacific Motors Corporation </div>
+					<div flex layout layout-align="center start" class="sub">Setting a Tradition of Excellence</div>
+				</div>
+				<div flex></div>
 			</div>
 		</div>
-		<!-- <div class="company-profile-card">
-
+		<div flex="none" layout="column" layout-align="start stretch" my-setter height-in-percent="100">
+			<div flex class="company-profile-content-first" layout="column" layout-align="start stretch">
+				<div flex layout="column" layout-align="start stretch" class="">
+					<div flex="40" layout layout-align="Center center" class="company-content-dark"> The Main Team </div>
+					<div flex layout layout-align="center stretch" layout-padding>
+						<div flex layout="row" layout-align="start stretch">
+							<div flex class="team-card" layout="column" layout-align="start stretch" layout-padding>
+								<div flex="45" layout="row" layout-align="start stretch">
+									<div flex="20"></div>
+									<div flex class="profile" layout layout-align="center center"> CC </div>
+									<div flex="20"></div>
+								</div>
+								<div flex="15" layout layout-align="center center" class="profile-name"> Carlos D. Chua</div>
+								<div flex="40" layout="row" layout-align="start stretch">
+									<div flex="5"></div>
+									<ol class="rounded-list" flex>
+										<li>Ceo and President</li>
+										<li>One of the directors of the corporation</li>                 
+									</ol>
+									<div flex="5"></div>
+								</div>
+							</div>
+							<div flex="none" my-setter width-in-percent="1.5"></div>
+							<div flex class="team-card" layout="column" layout-align="start stretch" layout-padding>
+								<div flex="45" layout="row" layout-align="start stretch">
+									<div flex="20"></div>
+									<div flex class="profile" layout layout-align="center center"> YLS </div>
+									<div flex="20"></div>
+								</div>
+								<div flex="15" layout layout-align="center center" class="profile-name"> Yu Liong So</div>
+								<div flex="40" layout="row" layout-align="start stretch">
+									<div flex="5"></div>
+									<ol class="rounded-list" flex>
+										<li>Vice President</li>
+										<li>One of the directors of the corporation</li>                 
+									</ol>
+									<div flex="5"></div>
+								</div>
+							</div>
+							<div flex="none" my-setter width-in-percent="1.5"></div>
+							<div flex class="team-card" layout="column" layout-align="start stretch" layout-padding>
+								<div flex="45" layout="row" layout-align="start stretch">
+									<div flex="20"></div>
+									<div flex class="profile" layout layout-align="center center"> EC </div>
+									<div flex="20"></div>
+								</div>
+								<div flex="15" layout layout-align="center center" class="profile-name"> Evangeline Chiu</div>
+								<div flex="40" layout="row" layout-align="start stretch">
+									<div flex="5"></div>
+									<ol class="rounded-list" flex>
+										<li>Treasurer</li>
+										<li>One of the directors of the corporation</li>              
+									</ol>
+									<div flex="5"></div>
+								</div>
+							</div>
+							<div flex="none" my-setter width-in-percent="1.5"></div>
+							<div flex class="team-card" layout="column" layout-align="start stretch" layout-padding>
+								<div flex="45" layout="row" layout-align="start stretch">
+									<div flex="20"></div>
+									<div flex class="profile" layout layout-align="center center"> EC </div>
+									<div flex="20"></div>
+								</div>
+								<div flex="15" layout layout-align="center center" class="profile-name"> Elaine Chiu</div>
+								<div flex="40" layout="row" layout-align="start stretch">
+									<div flex="5"></div>
+									<ol class="rounded-list" flex>
+										<li>Corporate Secretary</li>
+										<li>One of the directors of the corporation</li>                 
+									</ol>
+									<div flex="5"></div>
+								</div>
+							</div>
+							<div flex="none" my-setter width-in-percent="1.5"></div>
+							<div flex class="team-card" layout="column" layout-align="start stretch" layout-padding>
+								<div flex="45" layout="row" layout-align="start stretch">
+									<div flex="20"></div>
+									<div flex class="profile" layout layout-align="center center"> EC </div>
+									<div flex="20"></div>
+								</div>
+								<div flex="15" layout layout-align="center center" class="profile-name"> Eddy Chiu</div>
+								<div flex="40" layout="row" layout-align="start stretch">
+									<div flex="5"></div>
+									<ol class="rounded-list" flex>
+										<li>One of the directors of the corporation</li>                 
+									</ol>
+									<div flex="5"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div flex="15"></div>
+			</div>
 		</div>
-		<div class="company-profile-card">
-
+		<div flex="none" layout="column" layout-align="start stretch" my-setter height-in-percent="100">
+			<div flex class="company-profile-content-second" layout="column" layout-align="start stretch">
+				<div flex="10"></div>
+				<div flex layout="column" layout-align="start stretch" class="">
+					<div flex layout layout-align="Center center" class="company-content-light"> Who are we? </div>
+					<div flex layout layout-align="center start" class="sub">Setting a Tradition of Excellence</div>
+				</div>
+				<div flex></div>
+			</div>
 		</div>
-		<div class="company-profile-card">
+		<div flex="none" layout="column" layout-align="start stretch" my-setter height-in-percent="100">
+			<div flex class="company-profile-card" layout layout-align="start stretch">
 
+			</div>
 		</div>
-		<div class="company-profile-card">
-
-		</div>
-		<div class="company-profile-card">
-
-		</div>
-		<div class="company-profile-card">
-
-		</div>
-		<div class="company-profile-card">
-
-		</div>
-		<div class="company-profile-card">
-
-		</div>
-		<div class="company-profile-card">
-
-		</div>
-		<div class="company-profile-card">
-
-		</div>
-		<div class="company-profile-card">
-
-		</div>
-		<div class="company-profile-card">
-
-		</div>
-		<div class="company-profile-card">
-
-		</div>
-		<div class="company-profile-card">
-
-		</div> -->
 	</div>
+	<div flex="5"></div>
 </div>
+
+<!-- 
+	<ol class="rounded-list">
+										<li><a href="">List item</a></li>
+										<li><a href="">List item</a></li>
+										<li><a href="">List item</a>
+											<ol>
+												<li><a href="">List sub item</a></li>
+												<li><a href="">List sub item</a></li>
+												<li><a href="">List sub item</a></li>
+											</ol>
+										</li>
+										<li><a href="">List item</a></li>
+										<li><a href="">List item</a></li>                       
+									</ol>
+-->

@@ -14,12 +14,16 @@
 		color: black;
 	}
 	.card-details {
-		background-color: rgba(235,235,235, 1);
+		background-color: rgba(245,245,245, 0.50);
 		margin:2px;
 	}
 	 .pagination-select {
 		text-indent:45%;
-	} 
+	}
+	.edit-card {
+		background-color: yellow;
+		z-index: 20;
+	}
 </style>
 <div flex layout="column" layout-align="start stretch">
 	<div flex layout="column" layout-align="start stretch">
@@ -87,7 +91,8 @@
 				</div>
 			</div>
 			<div flex layout="row" layout-align="start stretch">
-				<div flex="25" layout="column" layout-align="center stretch" ng-repeat="list in offeringList | limitTo:4: (currentPage - 1) * 8 + 4"  class="card" my-setter margin="5">
+				<div flex="25" layout="column" layout-align="center stretch" ng-repeat="list in offeringList | limitTo:4: (currentPage - 1) * 8 + 4 track by $index"
+					class="card" my-setter margin="5" >
 					<div flex="60" layout layout-align="start stretch" style="margin-top:1.5%">
 						<div flex="none" my-setter width-in-percent="1.5"></div>
 						<img flex ng-src=".\assets\images\inventory\{{list.picture_1}}">

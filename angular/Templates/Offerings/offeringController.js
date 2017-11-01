@@ -4,6 +4,7 @@ app.controller('OfferingController', function ($scope, $rootScope, $interval, Da
     $scope.$parent.ChangeLoadBarState(false);
     $scope.currentPage = 1;
     $scope.divCount = 0;
+    $scope.hoverEdit = false;
     DataFactory.GetData().success(function(response){
         $scope.offeringList = response;
         $scope.divCount = ($scope.offeringList.length / 4);
@@ -27,5 +28,13 @@ app.controller('OfferingController', function ($scope, $rootScope, $interval, Da
         if($scope.currentPage != 1){
             $scope.currentPage = $scope.currentPage - 1;
         }
+    }
+
+    $scope.hoverIn = function(){
+        $scope.hoverEdit = true;
+    }
+
+    $scope.hoverOut = function(){
+        $scope.hoverEdit = false;
     }
 });

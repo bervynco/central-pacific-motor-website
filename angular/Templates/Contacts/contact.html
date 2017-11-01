@@ -1,5 +1,5 @@
 <div flex layout="row" layout-align="start stretch" class="contact-landing-page">
-	<div flex layout layout-align="start stretch" ng-if="contactState == false">
+	<div flex layout layout-align="start stretch" ng-if="contactState == false"  style="animation:none !important">
 		<div flex="20"></div>
 		<div flex layout="column" layout-align="start stretch" class="contact-content" >
 			<div flex="40" layout layout-align="center end" class="contact-header"> Contact Us </div>
@@ -15,9 +15,9 @@
 		</div>
 		<div flex="20"></div>
 	</div>
-	<div flex layout layout-align="start stretch" ng-if="contactState == true ">
+	<div flex layout layout-align="start stretch" ng-if="contactState == true " style="animation:none !important">
 		<div flex="20"></div>
-		<div flex layout="column" layout-align="start stretch" >
+		<div flex layout="column" layout-align="start stretch"  style="animation:none !important">
 			<div flex="20"></div>
 			<div flex layout="row" layout-align="start stretch">
 				<div flex layout="row" layout-align="start stretch" class="contact-form" layout-padding>
@@ -87,6 +87,6 @@
 			</div>
 			<div flex="20"></div>
 		</div>
-		<div flex="20"></div>
+		<div flex="20"  style="animation:none !important"></div>
 	</div>
 </div>
