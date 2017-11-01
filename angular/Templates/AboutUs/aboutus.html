@@ -131,7 +131,45 @@
 		border-radius: 2em;
 		transition: all .3s ease-out;
 	}
-	
+
+	.company-list li{
+		position: relative;
+		display: block;
+		padding: .4em .4em .4em 2em;
+		/* *padding: .4em; */
+		margin: .5em 0;
+		background: #ddd;
+		color: #444;
+		text-decoration: none;
+		border-radius: .3em;
+		transition: all .3s ease-out;   
+	}
+
+	.company-list li:hover{
+		background: #eee;
+	}
+
+	.company-list li:hover:before{
+		transform: rotate(360deg);  
+	}
+
+	.company-list li:before{
+		content: counter(li);
+		counter-increment: li;
+		position: absolute; 
+		left: -1.3em;
+		top: 50%;
+		margin-top: -1.3em;
+		background: rgba(173,216,230,1);
+		color:rgba(50,50,50,1);
+		height: 2em;
+		width: 2em;
+		line-height: 2em;
+		border: .3em solid #fff;
+		text-align: center;
+		font-weight: bold;
+		transition: all .3s ease-out;
+	}
 </style>
 <div layout="column" layout-align="start stretch" flex class="about-us">
 	<div flex layout="column" layout-align="start stretch" class="scroll">
@@ -229,7 +267,7 @@
 								<div flex="40" layout="row" layout-align="start stretch">
 									<div flex="5"></div>
 									<ol class="rounded-list" flex>
-										<li>One of the directors of the corporation</li>                 
+										<li>One of the directors of the corporation</li>              
 									</ol>
 									<div flex="5"></div>
 								</div>
@@ -243,16 +281,85 @@
 		<div flex="none" layout="column" layout-align="start stretch" my-setter height-in-percent="100">
 			<div flex class="company-profile-content-second" layout="column" layout-align="start stretch">
 				<div flex="10"></div>
-				<div flex layout="column" layout-align="start stretch" class="">
+				<div flex="20" layout="column" layout-align="start stretch" class="">
 					<div flex layout layout-align="Center center" class="company-content-light"> Who are we? </div>
-					<div flex layout layout-align="center start" class="sub">Setting a Tradition of Excellence</div>
 				</div>
-				<div flex></div>
-			</div>
-		</div>
-		<div flex="none" layout="column" layout-align="start stretch" my-setter height-in-percent="100">
-			<div flex class="company-profile-card" layout layout-align="start stretch">
-
+				<div flex layout layout-align="center stretch" layout-padding>
+					<div flex layout="row" layout-align="start stretch">
+						<div flex class="team-card" layout="column" layout-align="start stretch" layout-padding>
+							<div flex="30" layout="column" layout-align="center center">
+								<md-icon flex="none" my-setter height-in-percent="75" width-in-percent="75"md-svg-src="{{SVG.history}}"></md-icon>
+							</div>
+							<div flex layout="row"layout-align="start stretch">
+								<div flex="5"></div>
+								<ol class="company-list" flex>
+									<li> Incorporated and registered with the Securities and Exchange Commission under Registration No. 155725 on  September 27, 1988</li>
+									<li> The company iss located in its own building at Central Pacific Building, 1249 EDSA, Balintawak, Quezon City.</li>                 
+								</ol>
+								<div flex="5"></div>
+							</div>
+						</div>
+						<div flex="none" my-setter width-in-percent="1.5"></div>
+						<div flex class="team-card" layout="column" layout-align="start stretch" layout-padding>
+							<div flex="30" layout="column" layout-align="center center">
+								<md-icon flex="none" my-setter height-in-percent="75" width-in-percent="75"md-svg-src="{{SVG.star}}"></md-icon>
+							</div><div flex layout="row"layout-align="start stretch">
+								<div flex="5"></div>
+								<ol class="company-list" flex>
+									<li> Since 1981, the company been setting a tradition of excellence in the trucking industry as a supllier and importer 
+										of all kinds of trucks and as a hauler and trucker.
+									</li>
+									<li> As one of the biggest dealers of cement, he owned and maintained fifty hauler-trucks, which regularly carried and hauled cement 
+										from the Northern Cement Corporation depot to various destination points in Luzon. For this purpose, 
+										the Carlo Martin Cement Marketing Corporation was formed and established. 
+									</li>
+									<li> It remains to be one of the most reputable and reliable suppliers of trucks in Metro Manila.</li>        
+								</ol>
+								<div flex="5"></div>
+							</div>
+						</div>
+						<div flex="none" my-setter width-in-percent="1.5"></div>
+						<div flex class="team-card" layout="column" layout-align="start stretch" layout-padding>
+							<div flex="30" layout="column" layout-align="center center">
+								<md-icon flex="none" my-setter height-in-percent="75" width-in-percent="75"md-svg-src="{{SVG.team}}"></md-icon>
+							</div>
+							<div flex layout="row"layout-align="start stretch">
+								<div flex="5"></div>
+								<ol class="company-list" flex>
+									<li> As an importer, distributor, and supplier of trucks of all kinds, Central Pacific can make 
+										available fleets of trucks needed for its use in any hauling activity or requirement.
+									</li>
+									<li> Its track record in the hauling industry is difficult to match, having been in the truck hauling for more than twenty years. </li>
+									<li> Central Pacific has a complete complement of personnel to sustain its hauling business. 
+										Well trained, skilled, experienced and disciplined drivers, helpers, mechanics and other support personnel, 
+										who have been working for Central Pacific for fifteen to twenty years or more.
+									</li>
+								</ol>
+								<div flex="5"></div>
+							</div>
+						</div>
+						<div flex="none" my-setter width-in-percent="1.5"></div>
+						<div flex class="team-card" layout="column" layout-align="start stretch" layout-padding>
+							<div flex="30" layout="column" layout-align="center center">
+								<md-icon flex="none" my-setter height-in-percent="75" width-in-percent="75"md-svg-src="{{SVG.cityscape}}"></md-icon>
+							</div>
+							<div flex layout="row"layout-align="start stretch">
+								<div flex="5"></div>
+								<ol class="company-list" flex>
+									<li> The company has built up its maintenance and repairs facilities and trained 
+										an experienced maintenance crew to ensure that all its hauling equipment are in good condition, 
+										safe and roadworthy at all times.
+									</li>
+									<li>The company’s record, experience, equipment, facilities, personnel and crew, 
+										and capability to provide the services sought by the client are backed by its 
+										long years of tradition of excellence. 
+									</li>                 
+								</ol>
+								<div flex="5"></div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

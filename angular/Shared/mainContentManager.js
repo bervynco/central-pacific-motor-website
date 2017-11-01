@@ -34,7 +34,11 @@ mainConfigManager.provider('ConfigurableItems', function ConfigurableItemsProvid
         message: svgsrc + "message.svg",
         marker: svgsrc + "marker.svg",
         left: svgsrc + "left-arrow.svg",
-        right: svgsrc + "right-arrow.svg"
+        right: svgsrc + "right-arrow.svg",
+        star: svgsrc + "star.svg",
+        history: svgsrc + "history.svg",
+        team: svgsrc + "team.svg",
+        cityscape: svgsrc + "cityscape.svg"
     }
 
     this.$get = function () {
