@@ -96,19 +96,13 @@
             <div flex="20" flex-gt-xs="none" flex-gt-sm="5"flex-gt-md="10" flex-gt-lg="15"></div>
         </div>
         <div flex ui-view layout class="main-container"></div>
-        <div class="master-footer" layout>
+        <div class="master-footer" layout layout-align="center stretch">
             <div flex layout layout-align="center center">
-                <span class="subtitle">
+                <span class="subtitle" flex layout layout-align="center center">
                     &copy; Copyright 2017 CoB. All Rights Reserved.
                 </span>
             </div>
-            <div flex="10" ng-if="MainState!= 'Login'"></div>
-        </div>
-        <div ng-if="loadstate" class="load-container">
-            <div class="loader-circle"></div>
-            <div class="loader-line-mask">
-                <div class="loader-line"></div>
-            </div>
+            <!-- <div flex="10" ng-if="MainState!= 'Login'"></div> -->
         </div>
     </div>
     

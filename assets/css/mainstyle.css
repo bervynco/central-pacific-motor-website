@@ -452,25 +452,31 @@ div.main-header span {
     color: black;
 }
 .contact-content > .contact-header {
-    font-size:5vw; 
+    font-size:5vmax; 
     color: whitesmoke;  
     letter-spacing: 5px;
 }
 
 .contact-content > .contact-subheader {
-    font-size:2vw; 
+    font-size:2vmax; 
     color: rgba(200,200,200,1);
     letter-spacing: 5px;
     text-align:center;
 }
 
 .contact-button {
-    font-size:2vw; 
+    font-size:2vmax; 
     color: white; 
     border: 0.5px solid white;
     background-color: transparent;
 }
 
+.contact-button:hover {
+    color: black;
+    transition: 0.5s;
+    border: 0.5px solid rgba(113,209,97, 1);
+    background-color: rgba(113,209,97, 1);
+}
 .contact-form {
     border-radius:10px;
     background-color: rgba(255,255,255,0.6);
@@ -481,8 +487,9 @@ div.main-header span {
     border-radius:10px;
 }
 .contact-form-header {
-    font-size:1.5em;
+    font-size:1.5vmax;
     color: rgba(20,20,20,1);
+    font-weight:bolder
 }
 /* HEADER DETAILS */
 div.master-header {
@@ -586,11 +593,11 @@ div.master-footer {
     bottom: 0;
 }
 
-    div.master-footer div.silver-logo > img {
+    /* div.master-footer div.silver-logo > img {
         margin-top: 7%;
         max-height: 90%;
         max-width: 90%;
-    }
+    } */
 
     div.master-footer span.subtitle {
         font-size: 75%;
@@ -633,7 +640,7 @@ div.master-footer {
 
 .search-form > div >.form-header {
     /* font-size: 50px; */
-    font-size: 1.5vmax;
+    font-size: 1.75vmax;
 }
 .search-form > div {
     border: 3px solid rgba(100,100,100,1);
