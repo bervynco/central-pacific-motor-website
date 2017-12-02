@@ -214,6 +214,11 @@
     0%  {max-width: 0%;}
     100% {max-width: 100%;}
 }
+
+.scroll {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
 .scrollbar-rail > .scroll-element {
     background-color: transparent;
 }
@@ -476,7 +481,7 @@ div.main-header span {
     border-radius:10px;
 }
 .contact-form-header {
-    font-size:2em;
+    font-size:1.5em;
     color: rgba(20,20,20,1);
 }
 /* HEADER DETAILS */
@@ -627,7 +632,7 @@ div.master-footer {
 }
 
 .search-form > div >.form-header {
-    font-size:2em;
+    font-size:1.5em;
 }
 .search-form > div {
     border: 3px solid rgba(100,100,100,1);
