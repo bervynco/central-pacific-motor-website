@@ -452,20 +452,20 @@ div.main-header span {
     color: black;
 }
 .contact-content > .contact-header {
-    font-size:5em; 
+    font-size:5vw; 
     color: whitesmoke;  
     letter-spacing: 5px;
 }
 
 .contact-content > .contact-subheader {
-    font-size:2em; 
+    font-size:2vw; 
     color: rgba(200,200,200,1);
     letter-spacing: 5px;
     text-align:center;
 }
 
 .contact-button {
-    font-size:2em; 
+    font-size:2vw; 
     color: white; 
     border: 0.5px solid white;
     background-color: transparent;
@@ -632,7 +632,7 @@ div.master-footer {
 }
 
 .search-form > div >.form-header {
-    font-size:1.5em;
+    font-size:1.75vw;
 }
 .search-form > div {
     border: 3px solid rgba(100,100,100,1);
