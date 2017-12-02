@@ -632,7 +632,8 @@ div.master-footer {
 }
 
 .search-form > div >.form-header {
-    font-size:1.75vw;
+    /* font-size: 50px; */
+    font-size: 1.5vmax;
 }
 .search-form > div {
     border: 3px solid rgba(100,100,100,1);
