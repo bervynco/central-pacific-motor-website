@@ -44,7 +44,7 @@
 		/* color: rgba(50,50,50, 1); */
 	}
 	.company-content-light {
-		font-size: 4em;
+		font-size: 4vmax;
 		color: rgba(173,216,230,1);
 		letter-spacing: 3px;
 		/* color: rgba(50,50,50, 1); */
@@ -64,7 +64,7 @@
 
 	.team-card {
 		background-color: rgba(255,255,255,0.3);
-		font-size: 0.90em;
+		/* font-size: 0.90vmax; */
 		border: 1.5px solid rgba(255,255,255,0.5);
 	}
 	.profile {
@@ -143,6 +143,7 @@
 		text-decoration: none;
 		border-radius: .3em;
 		transition: all .3s ease-out;   
+		 font-size: 0.90vmax; 
 	}
 
 	.company-list li:hover{
@@ -183,111 +184,17 @@
 				<div flex></div>
 			</div>
 		</div>
-		<!-- <div flex="none" layout="column" layout-align="start stretch" my-setter height-in-percent="100">
-			<div flex class="company-profile-content-first" layout="column" layout-align="start stretch">
-				<div flex layout="column" layout-align="start stretch" class="">
-					<div flex="40" layout layout-align="Center center" class="company-content-dark"> The Main Team </div>
-					<div flex layout layout-align="center stretch" layout-padding>
-						<div flex layout="row" layout-align="start stretch">
-							<div flex class="team-card" layout="column" layout-align="start stretch" layout-padding>
-								<div flex="45" layout="row" layout-align="start stretch">
-									<div flex="20"></div>
-									<div flex class="profile" layout layout-align="center center"> CC </div>
-									<div flex="20"></div>
-								</div>
-								<div flex="15" layout layout-align="center center" class="profile-name"> Carlos D. Chua</div>
-								<div flex="40" layout="row" layout-align="start stretch">
-									<div flex="5"></div>
-									<ol class="rounded-list" flex>
-										<li>Ceo and President</li>
-										<li>One of the directors of the corporation</li>                 
-									</ol>
-									<div flex="5"></div>
-								</div>
-							</div>
-							<div flex="none" my-setter width-in-percent="1.5"></div>
-							<div flex class="team-card" layout="column" layout-align="start stretch" layout-padding>
-								<div flex="45" layout="row" layout-align="start stretch">
-									<div flex="20"></div>
-									<div flex class="profile" layout layout-align="center center"> YLS </div>
-									<div flex="20"></div>
-								</div>
-								<div flex="15" layout layout-align="center center" class="profile-name"> Yu Liong So</div>
-								<div flex="40" layout="row" layout-align="start stretch">
-									<div flex="5"></div>
-									<ol class="rounded-list" flex>
-										<li>Vice President</li>
-										<li>One of the directors of the corporation</li>                 
-									</ol>
-									<div flex="5"></div>
-								</div>
-							</div>
-							<div flex="none" my-setter width-in-percent="1.5"></div>
-							<div flex class="team-card" layout="column" layout-align="start stretch" layout-padding>
-								<div flex="45" layout="row" layout-align="start stretch">
-									<div flex="20"></div>
-									<div flex class="profile" layout layout-align="center center"> EC </div>
-									<div flex="20"></div>
-								</div>
-								<div flex="15" layout layout-align="center center" class="profile-name"> Evangeline Chiu</div>
-								<div flex="40" layout="row" layout-align="start stretch">
-									<div flex="5"></div>
-									<ol class="rounded-list" flex>
-										<li>Treasurer</li>
-										<li>One of the directors of the corporation</li>              
-									</ol>
-									<div flex="5"></div>
-								</div>
-							</div>
-							<div flex="none" my-setter width-in-percent="1.5"></div>
-							<div flex class="team-card" layout="column" layout-align="start stretch" layout-padding>
-								<div flex="45" layout="row" layout-align="start stretch">
-									<div flex="20"></div>
-									<div flex class="profile" layout layout-align="center center"> EC </div>
-									<div flex="20"></div>
-								</div>
-								<div flex="15" layout layout-align="center center" class="profile-name"> Elaine Chiu</div>
-								<div flex="40" layout="row" layout-align="start stretch">
-									<div flex="5"></div>
-									<ol class="rounded-list" flex>
-										<li>Corporate Secretary</li>
-										<li>One of the directors of the corporation</li>                 
-									</ol>
-									<div flex="5"></div>
-								</div>
-							</div>
-							<div flex="none" my-setter width-in-percent="1.5"></div>
-							<div flex class="team-card" layout="column" layout-align="start stretch" layout-padding>
-								<div flex="45" layout="row" layout-align="start stretch">
-									<div flex="20"></div>
-									<div flex class="profile" layout layout-align="center center"> EC </div>
-									<div flex="20"></div>
-								</div>
-								<div flex="15" layout layout-align="center center" class="profile-name"> Eddy Chiu</div>
-								<div flex="40" layout="row" layout-align="start stretch">
-									<div flex="5"></div>
-									<ol class="rounded-list" flex>
-										<li>One of the directors of the corporation</li>              
-									</ol>
-									<div flex="5"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div flex="15"></div>
-			</div>
-		</div> -->
+		
 		<div flex="none" layout="column" layout-align="start stretch" my-setter height-in-percent="100">
 			<div flex class="company-profile-content-second" layout="column" layout-align="start stretch">
-				<div flex="10"></div>
-				<div flex="20" layout="column" layout-align="start stretch" class="">
+				<div flex="10" hide-xs hide-sm></div>
+				<div flex="10" layout="column" layout-align="start stretch" class="">
 					<div flex layout layout-align="Center center" class="company-content-light"> Who are we? </div>
 				</div>
 				<div flex layout layout-align="center stretch" layout-padding>
-					<div flex layout="row" layout-align="start stretch">
+					<div flex layout="row" layout-xs="column" layout-sm="column" layout-align="start stretch">
 						<div flex class="team-card" layout="column" layout-align="start stretch" layout-padding>
-							<div flex="30" layout="column" layout-align="center center">
+							<div flex="30" layout="column" layout-align="center center" hide-xs hide-sm>
 								<md-icon flex="none" my-setter height-in-percent="75" width-in-percent="75"md-svg-src="{{SVG.history}}"></md-icon>
 							</div>
 							<div flex layout="row"layout-align="start stretch">
@@ -299,12 +206,16 @@
 								<div flex="5"></div>
 							</div>
 						</div>
-						<div flex="none" my-setter width-in-percent="1.5"></div>
+
+						<div flex="none" my-setter width-in-percent="1.5" hide-xs hide-sm show-md show-lg show-xl></div>
+						<div flex="none" my-setter height-in-percent="0.5" show-xs show-sm hide-md hide-lg hide-xl></div>
+						
 						<div flex class="team-card" layout="column" layout-align="start stretch" layout-padding>
-							<div flex="30" layout="column" layout-align="center center">
+							<div flex="30" layout="column" layout-align="center center" hide-xs hide-sm>
 								<md-icon flex="none" my-setter height-in-percent="75" width-in-percent="75"md-svg-src="{{SVG.star}}"></md-icon>
-							</div><div flex layout="row"layout-align="start stretch">
-								<div flex="5"></div>
+							</div>
+							<div flex layout="row"layout-align="start stretch">
+								  <div flex="5"></div>  
 								<ol class="company-list" flex>
 									<li> Since 1981, the company been setting a tradition of excellence in the trucking industry as a supllier and importer 
 										of all kinds of trucks and as a hauler and trucker.
@@ -318,13 +229,16 @@
 								<div flex="5"></div>
 							</div>
 						</div>
-						<div flex="none" my-setter width-in-percent="1.5"></div>
+
+						<div flex="none" my-setter width-in-percent="1.5" hide-xs hide-sm show-md show-lg show-xl></div>
+						<div flex="none" my-setter height-in-percent="0.5" show-xs show-sm hide-md hide-lg hide-xl></div>
+						
 						<div flex class="team-card" layout="column" layout-align="start stretch" layout-padding>
-							<div flex="30" layout="column" layout-align="center center">
+							<div flex="30" layout="column" layout-align="center center" hide-xs hide-sm>
 								<md-icon flex="none" my-setter height-in-percent="75" width-in-percent="75"md-svg-src="{{SVG.team}}"></md-icon>
 							</div>
 							<div flex layout="row"layout-align="start stretch">
-								<div flex="5"></div>
+								 <div flex="5"></div> 
 								<ol class="company-list" flex>
 									<li> As an importer, distributor, and supplier of trucks of all kinds, Central Pacific can make 
 										available fleets of trucks needed for its use in any hauling activity or requirement.
@@ -338,13 +252,16 @@
 								<div flex="5"></div>
 							</div>
 						</div>
-						<div flex="none" my-setter width-in-percent="1.5"></div>
+
+						<div flex="none" my-setter width-in-percent="1.5" hide-xs hide-sm show-md show-lg show-xl></div>
+						<div flex="none" my-setter height-in-percent="0.5" show-xs show-sm hide-md hide-lg hide-xl></div>
+
 						<div flex class="team-card" layout="column" layout-align="start stretch" layout-padding>
-							<div flex="30" layout="column" layout-align="center center">
-								<md-icon flex="none" my-setter height-in-percent="75" width-in-percent="75"md-svg-src="{{SVG.cityscape}}"></md-icon>
+							<div flex="30" flex-xs="20" flex-sm="20" layout="column" layout-align="center stretch" hide-xs hide-sm>
+								<md-icon flex="none" my-setter height-in-percent="90" width-in-percent="90" md-svg-src="{{SVG.cityscape}}"></md-icon>
 							</div>
 							<div flex layout="row"layout-align="start stretch">
-								<div flex="5"></div>
+								 <div flex="5"></div> 
 								<ol class="company-list" flex>
 									<li> The company has built up its maintenance and repairs facilities and trained 
 										an experienced maintenance crew to ensure that all its hauling equipment are in good condition, 
@@ -360,24 +277,9 @@
 						</div>
 					</div>
 				</div>
+				<div flex="5" hide-xs hide-sm></div>
 			</div>
 		</div>
 	</div>
 	<div flex="5"></div>
 </div>
-
-<!-- 
-	<ol class="rounded-list">
-										<li><a href="">List item</a></li>
-										<li><a href="">List item</a></li>
-										<li><a href="">List item</a>
-											<ol>
-												<li><a href="">List sub item</a></li>
-												<li><a href="">List sub item</a></li>
-												<li><a href="">List sub item</a></li>
-											</ol>
-										</li>
-										<li><a href="">List item</a></li>
-										<li><a href="">List item</a></li>                       
-									</ol>
--->
