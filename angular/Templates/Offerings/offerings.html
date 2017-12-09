@@ -141,8 +141,102 @@
 			</div>
 			<div flex="15"></div>
 		</div>
-		<!-- md, lg, xl screen -->
-		<div flex layout="column" layout-align="start stretch" hide-xs hide-sm>
+		<!-- md screen -->
+		<div flex layout="column" layout-align="start stretch" hide-xs hide-sm hide-lg hide-xl>
+			<div flex layout="row" layout-align="start stretch">
+				<div flex layout="column" layout-align="center stretch" ng-repeat="list in offeringList | limitTo:3: (currentPage - 1) * 6"  class="card" my-setter margin="5">
+					<div flex="60" layout layout-align="start stretch" style="margin-top:1.5%">
+						<div flex="none" my-setter width-in-percent="1.5"></div>
+						<img flex ng-src=".\assets\images\inventory\{{list.picture_1}}">
+						<div flex="none" my-setter width-in-percent="1.5"></div>
+					</div>
+					<div flex="10" layout layout-align="center center" class="card-header"> {{list.make}} </div>
+					<div flex layout="column" layout-align="start stretch" class="card-content" style="margin: 2px;">
+						<div flex layout layout-align="start stretch" class="card-details">
+							<div flex="30" layout layout-align="start stretch">
+								<div flex="none" my-setter width-in-percent="5"></div>
+								<div flex layout layout-align="start center"> Description </div>
+							</div>
+							<div flex="none" my-setter width-in-percent="1" style="background-color:white"></div>
+							<div flex layout layout-align="start stretch">
+								<div flex="none" my-setter width-in-percent="2"></div>
+								<div flex layout layout-align="start center"> {{list.description}} </div>
+							</div>
+						</div>
+						<div flex layout layout-align="start stretch" class="card-details">
+							<div flex="30" layout layout-align="start stretch">
+								<div flex="none" my-setter width-in-percent="5"></div>
+								<div flex layout layout-align="start center"> Year </div>
+							</div>
+							<div flex="none" my-setter width-in-percent="1" style="background-color:white"></div>
+							<div flex layout layout-align="start stretch">
+								<div flex="none" my-setter width-in-percent="2"></div>
+								<div flex layout layout-align="start center"> {{list.year}} </div>
+							</div>
+						</div>
+						<div flex layout layout-align="start stretch" class="card-details">
+							<div flex="30" layout layout-align="start stretch">
+								<div flex="none" my-setter width-in-percent="5"></div>
+								<div flex layout layout-align="start center"> Length </div>
+							</div>
+							<div flex="none" my-setter width-in-percent="1" style="background-color:white"></div>
+							<div flex layout layout-align="start stretch">
+								<div flex="none" my-setter width-in-percent="2"></div>
+								<div flex layout layout-align="start center"> {{list.length}} </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div flex layout="row" layout-align="start stretch">
+				<div flex layout="column" layout-align="center stretch" ng-repeat="list in offeringList | limitTo:3: (currentPage - 1) * 6 + 3 track by $index"
+					class="card" my-setter margin="5" >
+					<div flex="60" layout layout-align="start stretch" style="margin-top:1.5%">
+						<div flex="none" my-setter width-in-percent="1.5"></div>
+						<img flex ng-src=".\assets\images\inventory\{{list.picture_1}}">
+						<div flex="none" my-setter width-in-percent="1.5"></div>
+					</div>
+					<div flex="10" layout layout-align="center center" class="card-header"> {{list.make}} </div>
+					<div flex layout="column" layout-align="start stretch" class="card-content">
+						<div flex layout layout-align="start stretch" class="card-details">
+							<div flex="30" layout layout-align="start stretch">
+								<div flex="none" my-setter width-in-percent="5"></div>
+								<div flex layout layout-align="start center"> Description </div>
+							</div>
+							<div flex="none" my-setter width-in-percent="1" style="background-color:white"></div>
+							<div flex layout layout-align="start stretch">
+								<div flex="none" my-setter width-in-percent="2"></div>
+								<div flex layout layout-align="start center"> {{list.description}} </div>
+							</div>
+						</div>
+						<div flex layout layout-align="start stretch" class="card-details">
+							<div flex="30" layout layout-align="start stretch">
+								<div flex="none" my-setter width-in-percent="5"></div>
+								<div flex layout layout-align="start center"> Year </div>
+							</div>
+							<div flex="none" my-setter width-in-percent="1" style="background-color:white"></div>
+							<div flex layout layout-align="start stretch">
+								<div flex="none" my-setter width-in-percent="2"></div>
+								<div flex layout layout-align="start center"> {{list.year}} </div>
+							</div>
+						</div>
+						<div flex layout layout-align="start stretch" class="card-details">
+							<div flex="30" layout layout-align="start stretch">
+								<div flex="none" my-setter width-in-percent="5"></div>
+								<div flex layout layout-align="start center"> Length </div>
+							</div>
+							<div flex="none" my-setter width-in-percent="1" style="background-color:white"></div>
+							<div flex layout layout-align="start stretch">
+								<div flex="none" my-setter width-in-percent="2"></div>
+								<div flex layout layout-align="start center"> {{list.length}} </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- lg, xl screen -->
+		<div flex layout="column" layout-align="start stretch" hide-xs hide-sm hide-md>
 			<div flex layout="row" layout-align="start stretch">
 				<div flex="25" layout="column" layout-align="center stretch" ng-repeat="list in offeringList | limitTo:4: (currentPage - 1) * 8"  class="card" my-setter margin="5">
 					<div flex="60" layout layout-align="start stretch" style="margin-top:1.5%">
@@ -235,10 +329,10 @@
 				</div>
 			</div>
 		</div>
-		 <div flex="5" layout="row" layout-align="center stretch" hide-xs hide-sm>
+		<div flex="5" layout="row" layout-align="center stretch" hide-xs hide-sm>
 			<div flex="15" layout layout-align="center center">
 				<md-icon md-svg-src="{{SVG.left}}" layout layout-align="center center" flex ng-class="currentPage == 1 ? 'not-allowed' : 'pointer'" ng-click="PreviousPage()"></md-icon>
-				<div flex="20"> {{currentPage}} </div>
+				<div flex="20" layout layout-align="center center" style="color: rgba(0,0,0,1)"> {{currentPage}} </div>
 				<md-icon md-svg-src="{{SVG.right}}" layout layout-align="center center" flex ng-class="((currentPage + 1) == offeringList.length + 1  )? 'not-allowed': 'pointer'" ng-click="NextPage()"></md-icon>
 			</div>
 		</div> 
